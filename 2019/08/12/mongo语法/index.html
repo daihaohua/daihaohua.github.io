@@ -30,7 +30,7 @@
 
 
 <body>
-<header style="height: 100vh;">
+<header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
 <div class="container">
     <a class="navbar-brand" href="/"><strong>白羊座的梦</strong></a>
@@ -66,13 +66,16 @@
 
 </nav>
     <div class="view intro-2"
-         style="background: url('/img/index.jpg')no-repeat center center;background-size: cover;">
+         style="background: url('/img/post.jpg')no-repeat center center;background-size: cover;">
         <div class="full-bg-img">
             <div class="mask rgba-black-light flex-center">
                 <div class="container text-center white-text wow fadeInUp">
                     <span class="h2" id="subtitle">
                         
                     </span>
+                    
+                        <br>
+                        <p>Monday, August 12th 2019, 5:28 pm</p>
                     
                 </div>
             </div>
@@ -82,141 +85,60 @@
 
 <main>
     
-        <div class="container nopadding-md">
-            <div class="py-5 z-depth-3 board">
-                
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-10 m-auto">
-                            <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/post.css">
 
 
 
-    <div class="row mb-4 mx-auto">
-        
-        
-        <div class="col-12 col-md-8 m-auto">
-            <a href="/2019/08/12/mongo语法/">
-                <p class="h4 index-header">mongo语法</p>
-                <div class="index-excerpt">
-                    
-                        <div class="index-text mb-1">mongo的各种语法...</div>
-                    
-                </div>
-            </a>
+<div class="container-fluid">
+    <div class="row">
+        <div class="d-none d-lg-block col-lg-2"></div>
+        <div class="col-lg-8 nopadding-md">
+            <div class="container nopadding-md">
+                <div class="py-5 z-depth-3 board">
+                    <div class="post-content markdown-body m-auto">
+                        <h1 id="mongo的各种语法"><a href="#mongo的各种语法" class="headerlink" title="mongo的各种语法"></a>mongo的各种语法</h1><a id="more"></a>
+<h3 id="在黑窗口打开mongo的基本步骤"><a href="#在黑窗口打开mongo的基本步骤" class="headerlink" title="在黑窗口打开mongo的基本步骤"></a>在黑窗口打开mongo的基本步骤</h3><pre><code class="bash">mongo (如果要更改端口号的话就要加上--port 端口号)
+use 数据库名(打开当前的数据库，有则打开，没有则创建)
+show dbs(查看所有的数据名)
+db(是只当前数据的数据库，你当前在那个数据库他就指向那个数据库)
+show collections(查看所有的集合名)
+db.users.find()(查找users表中的所有数据)
+db.users.find().pretty()(对查出来的数据序列化处理)   </code></pre>
+<h3 id="mongoose中的聚合-管道符-下面是聚合中的-match和-project的用法"><a href="#mongoose中的聚合-管道符-下面是聚合中的-match和-project的用法" class="headerlink" title="mongoose中的聚合(管道符)下面是聚合中的$match和$project的用法"></a>mongoose中的聚合(管道符)下面是聚合中的$match和$project的用法</h3><p><img src="/monoose/1565007780192.png" alt></p>
+<h3 id="ro表示或者"><a href="#ro表示或者" class="headerlink" title="$ro表示或者"></a>$ro表示或者</h3><p><img src="/images/1565007960700.png" alt></p>
 
-            
-                <div>
-                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-08-12
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    
-                </div>
-            
-        </div>
-    </div>
-
-    <div class="row mb-4 mx-auto">
-        
-        
-        <div class="col-12 col-md-8 m-auto">
-            <a href="/2019/08/12/git/">
-                <p class="h4 index-header">git</p>
-                <div class="index-excerpt">
-                    
-                        <div class="index-text mb-1">git的基本用法</div>
-                    
-                </div>
-            </a>
-
-            
-                <div>
-                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-08-12
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    
-                        <i class="iconfont icon-cc-tag-more"></i>
-                        
-                            git&nbsp;
-                        
-                    
-                </div>
-            
-        </div>
-    </div>
-
-    <div class="row mb-4 mx-auto">
-        
-        
-        <div class="col-12 col-md-8 m-auto">
-            <a href="/2019/08/12/hello-world/">
-                <p class="h4 index-header">hello wro</p>
-                <div class="index-excerpt">
-                    
-                        <div class="index-text mb-1">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post$ hexo new &quot;你好&quot;
-$ hexo new &quot;你好&quot;
-$ hexo new &quot;你好&quot;
-More info: Writing
-Run server$ hexo server
-More info: Server
-Generate static files$ hexo generate
-More info: Generating
-Deploy to remote sites$ hexo deploy
-More info: Deployment
-</div>
-                    
-                </div>
-            </a>
-
-            
-                <div>
-                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-08-12
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    
-                        <i class="iconfont icon-cc-tag-more"></i>
-                        
-                            首页&nbsp;
-                        
-                    
-                </div>
-            
-        </div>
-    </div>
-
-    <div class="row mb-4 mx-auto">
-        
-        
-        <div class="col-12 col-md-8 m-auto">
-            <a href="/2019/08/12/我的第一篇文章/">
-                <p class="h4 index-header">我的第一篇文章</p>
-                <div class="index-excerpt">
-                    
-                        <div class="index-text mb-1">这是我的第一篇文章的首页...</div>
-                    
-                </div>
-            </a>
-
-            
-                <div>
-                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-08-12
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    
-                        <i class="iconfont icon-cc-tag-more"></i>
-                        
-                            文章&nbsp;
-                        
-                    
-                </div>
-            
-        </div>
-    </div>
-
-
-
+                        <hr>
+                        <div>
+                            <p>
+                                
+                            </p>
                         </div>
+                        <br>
+                        
+                            <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                        
                     </div>
                 </div>
             </div>
         </div>
+        <div class="d-none d-lg-block col-lg-2 toc-container">
+            
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i> Toc:</p> 
+    <div id="tocbot"></div>
+  </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="comments" id="comments">
+    
+</div>
     
 </main>
 
@@ -237,6 +159,11 @@ More info: Deployment
   <script src="/lib/mdbootstrap/js/mdb.min.js?v=4.8.7"></script>
   <script src="/js/main.js"></script>
   
+    
+      <script src="/lib/tocbot/tocbot.min.js?v=4.7.0"></script>
+    
+    <script src="/js/post.js"></script>
+  
   
     <script src="/lib/prettify/prettify.min.js?v=0.1.0"></script>
     <script>
@@ -252,7 +179,7 @@ More info: Deployment
         var typed = new Typed('#subtitle', {
           strings: [
             '  ',
-            "欢迎来到白羊座的博客&nbsp;",
+            "mongo语法&nbsp;",
         ],
         cursorChar: "_",
         typeSpeed: 70,
