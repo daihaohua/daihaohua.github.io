@@ -75,7 +75,7 @@
                     </span>
                     
                         <br>
-                        <p>Monday, August 12th 2019, 5:28 pm</p>
+                        <p>Tuesday, August 13th 2019, 2:58 pm</p>
                     
                 </div>
             </div>
@@ -96,16 +96,26 @@
             <div class="container nopadding-md">
                 <div class="py-5 z-depth-3 board">
                     <div class="post-content markdown-body m-auto">
-                        <h1 id="mongo的各种语法"><a href="#mongo的各种语法" class="headerlink" title="mongo的各种语法"></a>mongo的各种语法</h1><a id="more"></a>
-<h3 id="在黑窗口打开mongo的基本步骤"><a href="#在黑窗口打开mongo的基本步骤" class="headerlink" title="在黑窗口打开mongo的基本步骤"></a>在黑窗口打开mongo的基本步骤</h3><pre><code class="bash">mongo (如果要更改端口号的话就要加上--port 端口号)
-use 数据库名(打开当前的数据库，有则打开，没有则创建)
-show dbs(查看所有的数据名)
-db(是只当前数据的数据库，你当前在那个数据库他就指向那个数据库)
-show collections(查看所有的集合名)
-db.users.find()(查找users表中的所有数据)
-db.users.find().pretty()(对查出来的数据序列化处理)   </code></pre>
-<h3 id="mongoose中的聚合-管道符-下面是聚合中的-match和-project的用法"><a href="#mongoose中的聚合-管道符-下面是聚合中的-match和-project的用法" class="headerlink" title="mongoose中的聚合(管道符)下面是聚合中的$match和$project的用法"></a>mongoose中的聚合(管道符)下面是聚合中的$match和$project的用法</h3><p><img src="/monoose/1565184194358.png" alt></p>
-<h3 id="ro表示或者"><a href="#ro表示或者" class="headerlink" title="$ro表示或者"></a>$ro表示或者</h3><p><img src="/monoose/1565184222716.png" alt><br><img src="/monoose/1565184282239.png" alt><br><img src="/monoose/1565184333856.png" alt><br><img src="/monoose/1565184363250.png" alt><br><img src="/monoose/1565184381216.png" alt><br><img src="/monoose/1565184513147.png" alt><br><img src="/monoose/1565184534811.png" alt><br><img src="/monoose/1565184626319.png" alt><br><img src="/monoose/1565185757198.png" alt></p>
+                        <h1 id="git的基本用法"><a href="#git的基本用法" class="headerlink" title="git的基本用法"></a>git的基本用法</h1><h2 id="git的上传操作"><a href="#git的上传操作" class="headerlink" title="git的上传操作"></a>git的上传操作</h2><h3 id="1-创建本地库步骤"><a href="#1-创建本地库步骤" class="headerlink" title="1.创建本地库步骤"></a>1.创建本地库步骤</h3><pre><code class="bash">创建本地库
+命令,来到文件夹git init，初始化本地库</code></pre>
+<h3 id="2-内部的执行原理"><a href="#2-内部的执行原理" class="headerlink" title="2.内部的执行原理"></a>2.内部的执行原理</h3><p><img src="1565064969664.png" alt></p>
+<h3 id="3-为了区分不同人对仓库的使用，需要设置"><a href="#3-为了区分不同人对仓库的使用，需要设置" class="headerlink" title="3.为了区分不同人对仓库的使用，需要设置"></a>3.为了区分不同人对仓库的使用，需要设置</h3><p><img src="1565007780192.png" alt><br><img src="1565008269483.png" alt></p>
+<h3 id="4-ll-语法查看当前目录的所有文件夹，不包过隐藏文件夹"><a href="#4-ll-语法查看当前目录的所有文件夹，不包过隐藏文件夹" class="headerlink" title="4.ll 语法查看当前目录的所有文件夹，不包过隐藏文件夹"></a>4.ll 语法查看当前目录的所有文件夹，不包过隐藏文件夹</h3><h3 id="5-缓存区状态查看"><a href="#5-缓存区状态查看" class="headerlink" title="5.缓存区状态查看"></a>5.缓存区状态查看</h3><pre><code class="bash">git status   //查看缓存区状态；</code></pre>
+<h3 id="6-初始化本地库"><a href="#6-初始化本地库" class="headerlink" title="6.初始化本地库"></a>6.初始化本地库</h3><pre><code class="bash">git init 初始化项目</code></pre>
+<h3 id="7-通过vim命令可以打开vim编辑器-不建议使用"><a href="#7-通过vim命令可以打开vim编辑器-不建议使用" class="headerlink" title="7.通过vim命令可以打开vim编辑器(不建议使用)"></a>7.通过vim命令可以打开vim编辑器(不建议使用)</h3><pre><code class="bash">vim 文件名称     打开vim编辑器开始编辑；</code></pre>
+<h3 id="8-把项目添加到缓存区"><a href="#8-把项目添加到缓存区" class="headerlink" title="8.把项目添加到缓存区"></a>8.把项目添加到缓存区</h3><pre><code class="bash">git add 文件名称，  添加到缓存区</code></pre>
+<h3 id="9-把项目添加到缓存区"><a href="#9-把项目添加到缓存区" class="headerlink" title="9.把项目添加到缓存区"></a>9.把项目添加到缓存区</h3><pre><code class="bash">git commit  文件名 保存到本地库</code></pre>
+<h3 id="9-git-commit-m-“test-github”-文件名-加上-m-“test-github”就不用了进入vim编辑器，进去vim编辑器主要是添加修改的描述文件，你也可以直接通过-m-“描述”-这个方式来就不用进入vim编辑器；"><a href="#9-git-commit-m-“test-github”-文件名-加上-m-“test-github”就不用了进入vim编辑器，进去vim编辑器主要是添加修改的描述文件，你也可以直接通过-m-“描述”-这个方式来就不用进入vim编辑器；" class="headerlink" title="9.git commit -m “test github” 文件名    加上 -m “test github”就不用了进入vim编辑器，进去vim编辑器主要是添加修改的描述文件，你也可以直接通过    -m “描述”   这个方式来就不用进入vim编辑器；"></a>9.git commit -m “test github” 文件名    加上 -m “test github”就不用了进入vim编辑器，进去vim编辑器主要是添加修改的描述文件，你也可以直接通过    -m “描述”   这个方式来就不用进入vim编辑器；</h3><pre><code class="bash">git commit -m &quot;保存到本地库的描述&quot; 文件名</code></pre>
+<h3 id="10-查看是否有别名"><a href="#10-查看是否有别名" class="headerlink" title="10.查看是否有别名"></a>10.查看是否有别名</h3><pre><code class="bash">git remote -v，</code></pre>
+<h3 id="11-保存远程仓库地址"><a href="#11-保存远程仓库地址" class="headerlink" title="11.保存远程仓库地址"></a>11.保存远程仓库地址</h3><pre><code class="bash">git remote add origin  远程库地址     把远程库地址更改为 origin</code></pre>
+<h3 id="12-推送到gitgub的master分支中"><a href="#12-推送到gitgub的master分支中" class="headerlink" title="12.推送到gitgub的master分支中"></a>12.推送到gitgub的master分支中</h3><pre><code class="bash">git  push origin master     从本地的分支master推送到远程的master中</code></pre>
+<h3 id="13-查看文件内容；"><a href="#13-查看文件内容；" class="headerlink" title="13.查看文件内容；"></a>13.查看文件内容；</h3><pre><code class="bash">cat 文件名</code></pre>
+<h2 id="git的克隆操作"><a href="#git的克隆操作" class="headerlink" title="git的克隆操作"></a>git的克隆操作</h2><h3 id="1-拿到github的仓库地址"><a href="#1-拿到github的仓库地址" class="headerlink" title="1.拿到github的仓库地址"></a>1.拿到github的仓库地址</h3><pre><code class="bash">git clone 远程库地址 (克隆还会有三个操作)
+    ​    1.完整的吧远程库下载到本地
+
+    ​    2.创建origin远程名地址
+
+    ​    3.初始化本地库</code></pre>
 
                         <hr>
                         <div>
@@ -179,7 +189,7 @@ db.users.find().pretty()(对查出来的数据序列化处理)   </code></pre>
         var typed = new Typed('#subtitle', {
           strings: [
             '  ',
-            "mongo语法&nbsp;",
+            "git&nbsp;",
         ],
         cursorChar: "_",
         typeSpeed: 70,
