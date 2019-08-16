@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="这是一个大三学员的技术博客">
+    <meta name="author" content="白羊座的梦">
+    <meta name="keywords" content>
+    <title>你好</title>
+    <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css?v=5.7.2">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/bootstrap.min.css?v=4.3.1">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css?v=4.8.7">
+    <link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_l7tuu6qerl9.css">
+    
+        <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
+    
+    <link rel="stylesheet" href="/css/main.css">
+
+    
+</head>
+
+
+<body>
+<header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+<div class="container">
+    <a class="navbar-brand" href="/"><strong>白羊座的梦</strong></a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-center">
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">主页</a>
+            </li>
+			
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/archives/">归档</a>
+            </li>
+			
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">博主</a>
+            </li>
+			
+            
+        </ul>
+    </div>
+</div>
+
+
+</nav>
+    <div class="view intro-2"
+         style="background: url('/img/post.jpg')no-repeat center center;background-size: cover;">
+        <div class="full-bg-img">
+            <div class="mask rgba-black-light flex-center">
+                <div class="container text-center white-text wow fadeInUp">
+                    <span class="h2" id="subtitle">
+                        
+                    </span>
+                    
+                        <br>
+                        <p>Friday, August 16th 2019, 4:50 pm</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    
+        <link rel="stylesheet" href="/css/post.css">
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="d-none d-lg-block col-lg-2"></div>
+        <div class="col-lg-8 nopadding-md">
+            <div class="container nopadding-md">
+                <div class="py-5 z-depth-3 board">
+                    <div class="post-content markdown-body m-auto">
+                        <h1 id="less语法"><a href="#less语法" class="headerlink" title="less语法"></a>less语法</h1><a id="more"></a>
+<h2 id="1-定义变量"><a href="#1-定义变量" class="headerlink" title="1.定义变量"></a>1.定义变量</h2><h3 id="变量名-值；"><a href="#变量名-值；" class="headerlink" title="@变量名:值；"></a>@变量名:值；</h3><pre><code>    @c:10px;
+    @w:blue;
+    @hander:hander;
+    @ba:background-color;</code></pre><h2 id="2-定义变量类名"><a href="#2-定义变量类名" class="headerlink" title="2.定义变量类名"></a>2.定义变量类名</h2><h3 id="变量名"><a href="#变量名" class="headerlink" title="#@{变量名}{   }"></a>#@{变量名}{   }</h3><pre><code>    #@{hander} {
+        font-size:50px;
+        color:@w;
+        @{ba}:yellow;
+    }</code></pre><h2 id="3-使用变量属性名"><a href="#3-使用变量属性名" class="headerlink" title="3.使用变量属性名"></a>3.使用变量属性名</h2><h3 id="定义的属性名-yellow"><a href="#定义的属性名-yellow" class="headerlink" title="@{定义的属性名}:yellow;"></a>@{定义的属性名}:yellow;</h3><pre><code>    #@{hander} {
+        font-size:50px;
+        color:@w;
+        @{ba}:yellow;
+    }</code></pre><h2 id="4-less作用域"><a href="#4-less作用域" class="headerlink" title="4.less作用域"></a>4.less作用域</h2><h3 id="less的作用域和js的作用域相似，也有变量提升的"><a href="#less的作用域和js的作用域相似，也有变量提升的" class="headerlink" title="less的作用域和js的作用域相似，也有变量提升的"></a>less的作用域和js的作用域相似，也有变量提升的</h3><pre><code>    @var:100px;
+    #@{hander} {
+        @var:200px;
+        font-size:@var;
+        color:@w;
+        @{ba}:yellow;
+    }</code></pre><p><img src="1.png" alt="less"></p>
+<blockquote>
+<p>注意：less的变量<br>  1.第一个，使用变量，在本作用域找，找最后面那个<br>  2.没找到就到他父亲去找；</p>
+</blockquote>
+<h2 id="5-less的混合"><a href="#5-less的混合" class="headerlink" title="5.less的混合"></a>5.less的混合</h2><h3 id="5-1-混合的使用（混合相当于定义一个函数在其他的地方调用）"><a href="#5-1-混合的使用（混合相当于定义一个函数在其他的地方调用）" class="headerlink" title="5.1.混合的使用（混合相当于定义一个函数在其他的地方调用）"></a>5.1.混合的使用（混合相当于定义一个函数在其他的地方调用）</h3><pre><code>    //定义普通混合在css中也会定义的
+    .shouji{
+        color:red;
+        font-size: 20px;
+         width:300px;
+         height:200;
+    }
+
+    #@{hander} {
+        //使用混合
+        .shouji();
+    }
+</code></pre><h3 id="5-2-不带输出的混合"><a href="#5-2-不带输出的混合" class="headerlink" title="5.2.不带输出的混合"></a>5.2.不带输出的混合</h3><pre><code>    //不带输出的混合(在css中这段不会显示出来)
+    .shouji(){
+        color:red;
+        font-size: 20px;
+         width:300px;
+         height:200;
+    }
+    #@{hander} {
+        //使用混合
+        .shouji();
+    }
+</code></pre><h3 id="5-3-带输出的混合"><a href="#5-3-带输出的混合" class="headerlink" title="5.3.带输出的混合"></a>5.3.带输出的混合</h3><pre><code>    //不带输出的混合(在css中这段不会显示出来)
+        //带输出的混合
+        .shouji(@w,@c,@h){
+            color:@c;
+            font-size: 20px;
+             width:@w;
+             height:@h;
+        }
+        #@{hander} {
+            //传参混合
+            .shouji(300px,red,200px);
+        }
+</code></pre><h3 id="5-4-带输出有默认值的混合"><a href="#5-4-带输出有默认值的混合" class="headerlink" title="5.4.带输出有默认值的混合"></a>5.4.带输出有默认值的混合</h3><p><img src="2.png" alt="带参混合"></p>
+<h3 id="5-5-带输出有指定默认值"><a href="#5-5-带输出有指定默认值" class="headerlink" title="5.5.带输出有指定默认值"></a>5.5.带输出有指定默认值</h3><p><img src="3.png" alt="指定默认值得混合"></p>
+<h3 id="5-6-混合中-arguments的使用"><a href="#5-6-混合中-arguments的使用" class="headerlink" title="5.6.混合中@arguments的使用"></a>5.6.混合中@arguments的使用</h3><p><img src="4.png" alt="arguments"><br><img src="5.png" alt="arguments"></p>
+<h2 id="6-less的if和else"><a href="#6-less的if和else" class="headerlink" title="6.less的if和else"></a>6.less的if和else</h2><h3 id="如何在less使用判断；"><a href="#如何在less使用判断；" class="headerlink" title="如何在less使用判断；"></a>如何在less使用判断；</h3><p> <img src="6.png" alt="when判断"><br> <img src="7.png" alt="when判断"></p>
+<h2 id="6-less混合的导入"><a href="#6-less混合的导入" class="headerlink" title="6.less混合的导入"></a>6.less混合的导入</h2><h3 id="如何在less使用导入的混合"><a href="#如何在less使用导入的混合" class="headerlink" title="如何在less使用导入的混合"></a>如何在less使用导入的混合</h3><p> <img src="8.png" alt="导入"><br> <img src="9.png" alt="导入"></p>
+<h2 id="6-less的嵌套使用"><a href="#6-less的嵌套使用" class="headerlink" title="6.less的嵌套使用"></a>6.less的嵌套使用</h2><h3 id="6-1-嵌套使用"><a href="#6-1-嵌套使用" class="headerlink" title="6.1.嵌套使用"></a>6.1.嵌套使用</h3><pre><code>.hander{
+    width:500px;
+    height: 300px;
+    border: 1px solid #ccc;
+    margin: auto;
+    //这是嵌套
+    li {
+          height: 20%;
+          @{ba}:red;
+          @{bor}:1px solid #ccc;
+          transition: 0.5s;
+          &gt;a{
+            color:yellow;  
+          }
+          //&amp;是指父选择器
+          &amp;:hover{
+               @{ba}:blue !important;
+               &gt;a{
+                   color:#000;
+               }
+          }
+        &amp;:last-child{
+            border-bottom:0;
+        }
+        &amp;:nth-child(odd){
+            @{ba}:#ccc;
+        }
+        &amp;:nth-child(even){
+            @{ba}:#fff;
+        }
+    }
+}
+</code></pre><blockquote>
+<p>注意：&amp;表示是父级选择器<br>  1.他只是吧父级标签复制下来，如果是这样的<br>       &amp;&amp;就是两个父级的标签<br>  2.他可以吧父级的标签复制下来在做连接<br>      &amp;-buttom</p>
+</blockquote>
+<h3 id="6-2-嵌套使用"><a href="#6-2-嵌套使用" class="headerlink" title="6.2.嵌套使用"></a>6.2.嵌套使用</h3><p><img src="10.png" alt="媒体查询"></p>
+<blockquote>
+<p>注意：如果没有写选择器的话就会采用父级的<br><img src="11.png" alt="变量媒体查询"></p>
+</blockquote>
+<h2 id="6-less操作符"><a href="#6-less操作符" class="headerlink" title="6.less操作符"></a>6.less操作符</h2><pre><code>//操作符
+@h:10
+.hander{
+    width:10px * 10px;
+    height:10px * 10px;
+    line-height: @h + 50px;
+}</code></pre><blockquote>
+<p>注意：<br>  1.如果两个单位符不一样以前面为主；<br>  2.如果前面没有单位符就会取后面的；</p>
+</blockquote>
+<h2 id="6-less定义函数"><a href="#6-less定义函数" class="headerlink" title="6.less定义函数"></a>6.less定义函数</h2><h3 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h3><pre><code>//定义函数
+#ren(){
+    color:red;
+    wan:150px;
+}
+.handel{
+    //拿到函数值
+    color:#ren[wan];
+}</code></pre>
+                        <hr>
+                        <div>
+                            <p>
+                                
+                                    <span class="badge badge-light">#&nbsp;less</span>
+                                    &nbsp;
+                                
+                            </p>
+                        </div>
+                        <br>
+                        
+                            <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-none d-lg-block col-lg-2 toc-container">
+            
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i> Toc:</p> 
+    <div id="tocbot"></div>
+  </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="comments" id="comments">
+    
+</div>
+    
+</main>
+
+<footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/0x2e/Material-T" target="_blank" rel="nofollow noopener"> <b>Material-T</b></a>
+    <br>
+    
+  </div>
+</footer>
+
+  <!-- SCRIPTS -->
+  <script src="/lib/mdbootstrap/js/jquery-3.4.1.min.js"></script>
+  <script src="/lib/mdbootstrap/js/popper.min.js"></script>
+  <script src="/lib/mdbootstrap/js/bootstrap.min.js?v=4.3.1"></script>
+  <script src="/lib/mdbootstrap/js/mdb.min.js?v=4.8.7"></script>
+  <script src="/js/main.js"></script>
+  
+    
+      <script src="/lib/tocbot/tocbot.min.js?v=4.7.0"></script>
+    
+    <script src="/js/post.js"></script>
+  
+  
+    <script src="/lib/prettify/prettify.min.js?v=0.1.0"></script>
+    <script>
+      $(document).ready(function(){
+        $('pre').addClass('prettyprint linenums');
+        prettyPrint();
+      })
+    </script>
+  
+  
+    <script src="/lib/typed/typed.min.js?v=2.0.9"></script>
+    <script>
+        var typed = new Typed('#subtitle', {
+          strings: [
+            '  ',
+            "less语法&nbsp;",
+        ],
+        cursorChar: "_",
+        typeSpeed: 70,
+        startDelay: 300, //开始之前延迟300毫秒
+        loop: false,
+        });
+        $(".typed-cursor").addClass("h2");
+    </script>
+  
+  
+    <script src="/lib/anchor/anchor.min.js?v=4.2.0"></script>
+    <script>
+      anchors.options = {
+        placement: "right",
+        visible: "false",
+        
+      };
+      anchors.add(".post-content > h1,h2,h3,h4,h5,h6");
+    </script>
+  
+</body>
+</html>
