@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="这是一个大三学员的技术博客">
+    <meta name="author" content="白羊座的梦">
+    <meta name="keywords" content>
+    <title>你好</title>
+    <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css?v=5.7.2">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/bootstrap.min.css?v=4.3.1">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css?v=4.8.7">
+    <link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_l7tuu6qerl9.css">
+    
+        <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
+    
+    <link rel="stylesheet" href="/css/main.css">
+
+    
+</head>
+
+
+<body>
+<header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+<div class="container">
+    <a class="navbar-brand" href="/"><strong>白羊座的梦</strong></a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-center">
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">主页</a>
+            </li>
+			
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/archives/">归档</a>
+            </li>
+			
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">博主</a>
+            </li>
+			
+            
+        </ul>
+    </div>
+</div>
+
+
+</nav>
+    <div class="view intro-2"
+         style="background: url('/img/post.jpg')no-repeat center center;background-size: cover;">
+        <div class="full-bg-img">
+            <div class="mask rgba-black-light flex-center">
+                <div class="container text-center white-text wow fadeInUp">
+                    <span class="h2" id="subtitle">
+                        
+                    </span>
+                    
+                        <br>
+                        <p>Thursday, August 22nd 2019, 5:03 pm</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    
+        <link rel="stylesheet" href="/css/post.css">
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="d-none d-lg-block col-lg-2"></div>
+        <div class="col-lg-8 nopadding-md">
+            <div class="container nopadding-md">
+                <div class="py-5 z-depth-3 board">
+                    <div class="post-content markdown-body m-auto">
+                        <h1 id="redux的初识见解"><a href="#redux的初识见解" class="headerlink" title="redux的初识见解"></a>redux的初识见解</h1><a id="more"></a>
+<h2 id="1-引入模块redux和react-redux"><a href="#1-引入模块redux和react-redux" class="headerlink" title="1.引入模块redux和react-redux"></a>1.引入模块redux和react-redux</h2><pre><code>    npm install redux --save
+    npm install react-redux --save</code></pre><h2 id="2-应用到全局的index-js中"><a href="#2-应用到全局的index-js中" class="headerlink" title="2.应用到全局的index.js中"></a>2.应用到全局的index.js中</h2><pre><code>    import React from &#39;react&#39;;
+    import ReactDOM from &#39;react-dom&#39;;
+    import App from &#39;./App&#39;;
+    import {createStore,applyMiddleware} from &#39;redux&#39;;
+    import {Provider} from &quot;react-redux&quot;
+    import reducer from &quot;./roudexs&quot;
+    import thunk from &quot;redux-thunk&quot;
+
+    const store = createStore(reducer,applyMiddleware(thunk))
+    //把创建的仓库放到第三方仓库中让所有组件多能拿到通过store传递数据
+    ReactDOM.render(
+    &lt;Provider store={store}&gt;
+        &lt;App /&gt;
+    &lt;/Provider&gt;
+    , document.getElementById(&#39;root&#39;));
+
+</code></pre><h2 id="3-通过redux模块导出createStore和applyMiddleware"><a href="#3-通过redux模块导出createStore和applyMiddleware" class="headerlink" title="3.通过redux模块导出createStore和applyMiddleware"></a>3.通过redux模块导出createStore和applyMiddleware</h2><pre><code> import {createStore,applyMiddleware} from &#39;redux&#39;;
+</code></pre><h2 id="4-通过react-redux模块导出Provider"><a href="#4-通过react-redux模块导出Provider" class="headerlink" title="4.通过react-redux模块导出Provider"></a>4.通过react-redux模块导出Provider</h2><pre><code> import {Provider} from &quot;react-redux&quot;
+</code></pre><h2 id="5-创建第三方仓库Provider"><a href="#5-创建第三方仓库Provider" class="headerlink" title="5.创建第三方仓库Provider"></a>5.创建第三方仓库Provider</h2><h3 id="Provider是第三方仓库，通过store属性向内部组件传递数据"><a href="#Provider是第三方仓库，通过store属性向内部组件传递数据" class="headerlink" title="Provider是第三方仓库，通过store属性向内部组件传递数据"></a>Provider是第三方仓库，通过store属性向内部组件传递数据</h3><pre><code> ReactDOM.render(
+ &lt;Provider store={store}&gt;
+     &lt;App /&gt;
+ &lt;/Provider&gt;
+ , document.getElementById(&#39;root&#39;));
+</code></pre><h2 id="6-通过connect连接Provider第三方仓库"><a href="#6-通过connect连接Provider第三方仓库" class="headerlink" title="6.通过connect连接Provider第三方仓库"></a>6.通过connect连接Provider第三方仓库</h2><h3 id="在需要使用或者要改变该仓库数据的地方使用"><a href="#在需要使用或者要改变该仓库数据的地方使用" class="headerlink" title="在需要使用或者要改变该仓库数据的地方使用"></a>在需要使用或者要改变该仓库数据的地方使用</h3><pre><code> //使用connect连接Provider拿到第三方仓库
+import {connect} from &quot;react-redux&quot;
+
+
+
+
+//这个state获取的就是仓库中combineReducers的所有值
+//mapStateToProps返回的必须是一个对象
+const mapStateToProps = ( state )=&gt;{
+    let {header,body} = state;
+    return {header,body}
+} ;
+// let mapStateToProps = (start)=&gt;{
+//     reutrn {&quot;abc&quot;:start}
+// }
+
+
+//使用connect方法把Header组件连接到
+export default connect(mapStateToProps)( Header )</code></pre><h2 id="7-创建仓库"><a href="#7-创建仓库" class="headerlink" title="7.创建仓库"></a>7.创建仓库</h2><h3 id="使用createSrore创建本地仓库第一个参数是reducer，第二个参数设置加载异步数据"><a href="#使用createSrore创建本地仓库第一个参数是reducer，第二个参数设置加载异步数据" class="headerlink" title="使用createSrore创建本地仓库第一个参数是reducer，第二个参数设置加载异步数据"></a>使用createSrore创建本地仓库第一个参数是reducer，第二个参数设置加载异步数据</h3><pre><code>import reducer from &quot;./roudexs&quot;
+const store = createStore(reducer,applyMiddleware(thunk))</code></pre><h2 id="8-导出reducer对象"><a href="#8-导出reducer对象" class="headerlink" title="8.导出reducer对象"></a>8.导出reducer对象</h2><pre><code>//把所有的要改变的数据结合一起；
+import {combineReducers} from &quot;redux&quot;
+
+import header from &quot;./header.js&quot;
+import body from &quot;./body.js&quot;
+//这个就是仓库中存放的值;
+//通过调用函数做进一步的处理；
+export default combineReducers({
+    header,
+    body
+})</code></pre><h2 id="9-对放到仓库中的数据做进一步处理"><a href="#9-对放到仓库中的数据做进一步处理" class="headerlink" title="9.对放到仓库中的数据做进一步处理"></a>9.对放到仓库中的数据做进一步处理</h2><pre><code>const Add_Num = &quot;加只鸡&quot;;
+const  romove_Num = &quot;少只鸡&quot;;
+export default function body(state=0,action){
+    switch(action.type){//传进来你到底是叫了一只鸡还是少了一只鸡，再来改变状态
+        case Add_Num:
+            return state + 1
+        case romove_Num:
+            return state - 1
+        default:
+            return 0
+
+    }
+}</code></pre><h2 id="10-在需要的组件里使用this-props下的dispatch方法改变数据"><a href="#10-在需要的组件里使用this-props下的dispatch方法改变数据" class="headerlink" title="10.在需要的组件里使用this.props下的dispatch方法改变数据"></a>10.在需要的组件里使用this.props下的dispatch方法改变数据</h2><pre><code>handelClick4 =()=&gt;{
+        let a = 4
+        //通过传入状态type进行相应的操作
+        this.props.dispatch({
+            a,
+            type:&quot;add&quot;
+        })
+    }</code></pre><h2 id="11-如果使用异步加载数据得话"><a href="#11-如果使用异步加载数据得话" class="headerlink" title="11.如果使用异步加载数据得话"></a>11.如果使用异步加载数据得话</h2><pre><code>handelClick5=()=&gt;{
+
+        //通过传入状态type进行相应的操作
+        this.props.dispatch(dispatch=&gt;{
+            setTimeout(()=&gt;{
+                dispatch({type:&quot;remove&quot;})
+            },1000)
+        })
+    }</code></pre>
+                        <hr>
+                        <div>
+                            <p>
+                                
+                                    <span class="badge badge-light">#&nbsp;react</span>
+                                    &nbsp;
+                                
+                            </p>
+                        </div>
+                        <br>
+                        
+                            <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-none d-lg-block col-lg-2 toc-container">
+            
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i> Toc:</p> 
+    <div id="tocbot"></div>
+  </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="comments" id="comments">
+    
+</div>
+    
+</main>
+
+<footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/0x2e/Material-T" target="_blank" rel="nofollow noopener"> <b>Material-T</b></a>
+    <br>
+    
+  </div>
+</footer>
+
+  <!-- SCRIPTS -->
+  <script src="/lib/mdbootstrap/js/jquery-3.4.1.min.js"></script>
+  <script src="/lib/mdbootstrap/js/popper.min.js"></script>
+  <script src="/lib/mdbootstrap/js/bootstrap.min.js?v=4.3.1"></script>
+  <script src="/lib/mdbootstrap/js/mdb.min.js?v=4.8.7"></script>
+  <script src="/js/main.js"></script>
+  
+    
+      <script src="/lib/tocbot/tocbot.min.js?v=4.7.0"></script>
+    
+    <script src="/js/post.js"></script>
+  
+  
+    <script src="/lib/prettify/prettify.min.js?v=0.1.0"></script>
+    <script>
+      $(document).ready(function(){
+        $('pre').addClass('prettyprint linenums');
+        prettyPrint();
+      })
+    </script>
+  
+  
+    <script src="/lib/typed/typed.min.js?v=2.0.9"></script>
+    <script>
+        var typed = new Typed('#subtitle', {
+          strings: [
+            '  ',
+            "redux的初识见解&nbsp;",
+        ],
+        cursorChar: "_",
+        typeSpeed: 70,
+        startDelay: 300, //开始之前延迟300毫秒
+        loop: false,
+        });
+        $(".typed-cursor").addClass("h2");
+    </script>
+  
+  
+    <script src="/lib/anchor/anchor.min.js?v=4.2.0"></script>
+    <script>
+      anchors.options = {
+        placement: "right",
+        visible: "false",
+        
+      };
+      anchors.add(".post-content > h1,h2,h3,h4,h5,h6");
+    </script>
+  
+</body>
+</html>
