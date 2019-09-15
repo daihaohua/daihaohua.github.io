@@ -96,6 +96,53 @@
         
         
         <div class="col-12 col-md-8 m-auto">
+            <a href="/2019/09/14/node中间件/">
+                <p class="h4 index-header">node中间件</p>
+                <div class="index-excerpt">
+                    
+                        <div class="index-text mb-1">node的中间件有两种第一种全局中间件    //第一种全局中间件
+    //1.所有的路由多会从这个中间件通过；
+    //2.只有next()再能进入下一个中间件；
+    // app.use((req,res,next)=&gt;{
+    //
+    //     res.send(&quot;我是全局中间件&quot;);
+    //     next();
+    // })第二种局部中间件    //第二种局部中间件
+    //1.定义一个函数
+    //2.放到需要继续验证的路由的前面
+    //3.当判读成功就next()进入第二个中间件
+
+    function dome(req,res,next){
+    res.send(&quot;我是局部中间件&quot;);
+    next();
+}
+    app.get(&quot;/user&quot;,dome,(req,res)=&gt;{
+    res.send(&quot;我是用户中间件&quot;)
+})
+</div>
+                    
+                </div>
+            </a>
+
+            
+                <div>
+                    <i class="iconfont icon-riqi2"></i>&nbsp;2019-09-14
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                        <i class="iconfont icon-cc-tag-more"></i>
+                        
+                            node&nbsp;
+                        
+                    
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="row mb-4 mx-auto">
+        
+        
+        <div class="col-12 col-md-8 m-auto">
             <a href="/2019/08/22/redux的初识见解/">
                 <p class="h4 index-header">redux的初识见解</p>
                 <div class="index-excerpt">
