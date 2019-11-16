@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  
+    <meta name="description" content="这是一个大三学员的技术博客">
+  
+
+  
+
+  
+    <meta name="author" content="白羊座的梦">
+  
+
+  
+
+  
+
+  <title>react路由 | 首页</title>
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link href="https://cdn.bootcss.com/highlight.js/9.15.6/styles/monokai.min.css" rel="stylesheet">
+  
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="container">
+    <!-- header -->
+<header class="header">
+  <div class="header-container ">
+    <nav class="header-navbar">
+      <div class="header-navbar-left">
+        <h1 class="header-navbar-logo">
+          <a href="/">
+            
+              <img src="https://qiniu.miiiku.xyz/src/images/logo.png" alt="首页">
+            
+          </a>
+        </h1>
+      </div>
+      <div class="header-navbar-right">
+        <div class="header-navbar-btn">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul class="header-navbar-list">
+          
+            <li class="header-navbar-item"><a href="/">首页</a></li>
+          
+            <li class="header-navbar-item"><a href="/links">友链</a></li>
+          
+            <li class="header-navbar-item"><a href="/tags">标签</a></li>
+          
+            <li class="header-navbar-item"><a href="/about">关于</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+    <section id="main"><!-- 文章详情页 -->
+
+
+<!-- banner container -->
+<div class="banner-container">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+      <div class="banner-content post-content is-post-image">
+        <div class="post-image" style="background-image: url(https://qiniu.miiiku.xyz/src/images/banner-message.jpg)"></div>
+        <div class="post-text">
+          <div class="type-wrap">
+            
+          </div>
+          <h1 class="title-wrap">react路由</h1>
+          <div class="meta-wrap">
+            <strong>白羊座的梦</strong>
+            <span>发布于</span>
+            
+  <a href="javascript:;" class="article-date">
+    <time datetime="2019-11-07T09:59:06.000Z" itemprop="datePublished">2019-11-07</time>
+  </a>
+
+          </div>
+        </div>
+      </div>
+    
+  
+
+  
+  
+
+</div>
+
+<!-- 文章内容 -->
+
+<div class="body-container">
+  <article id="article-content" class="main-container article-content">
+    
+    
+
+    <div class="article-entry">
+      <h1 id="react路由"><a href="#react路由" class="headerlink" title="react路由"></a>react路由</h1><a id="more"></a>
+<h2 id="react路由基本语法"><a href="#react路由基本语法" class="headerlink" title="react路由基本语法"></a>react路由基本语法</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs undefined">1<span class="hljs-selector-class">.BrowserRouter</span>这是包裹所有的路由<br>2<span class="hljs-selector-class">.Route</span>跳转的路径<br>3.路由默认的是不精准匹配，加上<span class="hljs-selector-tag">exact</span>就是精准匹配了<br>4<span class="hljs-selector-class">.NavLink</span>专门用来跳转的标签，转化后是<span class="hljs-selector-tag">a</span>标签<br>5<span class="hljs-selector-class">.activeClassName</span>当鼠标点击上去设置对应的样式，同时还要给根标签加上精准匹配<span class="hljs-selector-tag">exact</span>;<br>6<span class="hljs-selector-class">.Switch</span>是用来当没有路由满足的时候就会熏染没有路径的路由不能放其他的<span class="hljs-selector-tag">html</span>语法，只能放路由，也可以说匹配一条路由<br>7<span class="hljs-selector-class">.Redirect</span>这个是重定向，专门用来处理404页面的返回的<br>8<span class="hljs-selector-class">.this</span><span class="hljs-selector-class">.props</span><span class="hljs-selector-class">.match</span><span class="hljs-selector-class">.params</span>.设置的值   可以拿到动态匹配的值<br></code></pre></td></tr></table></figure>
+
+<h2 id="react路由获取数据"><a href="#react路由获取数据" class="headerlink" title="react路由获取数据"></a>react路由获取数据</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs undefined">1<span class="hljs-selector-class">.Redirect</span>这个是重定向，专门用来处理404页面的返回的;<br>2<span class="hljs-selector-class">.this</span><span class="hljs-selector-class">.props</span><span class="hljs-selector-class">.match</span><span class="hljs-selector-class">.params</span>.设置的值   可以拿到动态匹配的值;<br></code></pre></td></tr></table></figure>
+
+<h2 id="react路由获取查询字符串"><a href="#react路由获取查询字符串" class="headerlink" title="react路由获取查询字符串"></a>react路由获取查询字符串</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-selector-tag">import</span> <span class="hljs-selector-tag">Url</span> <span class="hljs-selector-tag">from</span> "<span class="hljs-selector-tag">url</span>"<br>3<span class="hljs-selector-class">.Url</span><span class="hljs-selector-class">.parse</span>(<span class="hljs-selector-tag">this</span><span class="hljs-selector-class">.props</span><span class="hljs-selector-class">.location</span><span class="hljs-selector-class">.search</span>,<span class="hljs-selector-tag">true</span>)<span class="hljs-selector-class">.query</span><span class="hljs-selector-class">.age</span>;<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在做404页面跳转的时候，如果做了定时器，一定要在组件卸载的时候做判断，否侧会出现异步报错</p>
+</blockquote>
+<h2 id="react路由模块化"><a href="#react路由模块化" class="headerlink" title="react路由模块化"></a>react路由模块化</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs undefined">router.length&gt;<span class="hljs-number">0</span> &amp;&amp;(<br>	router.map(<span class="hljs-function">(<span class="hljs-params">item,index</span>)=&gt;</span>&#123;<br>		<span class="hljs-keyword">return</span>(<br>				<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Route</span><br>					<span class="hljs-attr">key</span>=<span class="hljs-string">&#123;index&#125;</span><br>					&#123;<span class="hljs-attr">...item</span>&#125;<br>				/&gt;</span><br>			)<br>	&#125;)<br>)</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="react嵌套路由传递子组件"><a href="#react嵌套路由传递子组件" class="headerlink" title="react嵌套路由传递子组件"></a>react嵌套路由传递子组件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs undefined">&lt;Switch&gt;<span class="hljs-comment">//只显示一个组件</span><br> &#123;routers.length&gt;<span class="hljs-number">0</span>&amp;&amp;(<br>  routers.map(<span class="hljs-function">(<span class="hljs-params">item,index</span>)=&gt;</span>&#123;<br>	<span class="hljs-keyword">return</span> (<br>		<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Route</span><br>		  <span class="hljs-attr">key</span>=<span class="hljs-string">&#123;index&#125;//打标记</span><br>		  <span class="hljs-attr">exact</span>=<span class="hljs-string">&#123;item.exact&#125;//精度匹配</span><br>		  <span class="hljs-attr">path</span>=<span class="hljs-string">&#123;item.path&#125;react路由</span><br>		  <span class="hljs-attr">render</span>=<span class="hljs-string">&#123;(props)</span>=&gt;</span>&#123; //通过reader给子组件传递组件形成路由模块化<br>			  return <span class="hljs-tag">&lt;<span class="hljs-name">item.component</span> <span class="hljs-attr">data</span>=<span class="hljs-string">&#123;item.routes&#125;/</span>&gt;</span><br>			&#125;&#125;<br>		/&gt;<br>	)<br>  &#125;)<br> )&#125;<br> &#123;/*<span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">exact</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&#123;</span>'/'&#125; <span class="hljs-attr">component</span>=<span class="hljs-string">&#123;Home&#125;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Route</span>&gt;</span>*/&#125;<br> &#123;/*<span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&#123;</span>'/<span class="hljs-attr">news</span>'&#125; <span class="hljs-attr">component</span>=<span class="hljs-string">&#123;News&#125;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Route</span>&gt;</span>*/&#125;<br> &#123;/*<span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">path</span>=<span class="hljs-string">&#123;</span>'/<span class="hljs-attr">user</span>'&#125; <span class="hljs-attr">component</span>=<span class="hljs-string">&#123;User&#125;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Route</span>&gt;</span>*/&#125;<br> &#123;/*<span class="hljs-tag">&lt;<span class="hljs-name">Route</span> <span class="hljs-attr">component</span>=<span class="hljs-string">&#123;Not404&#125;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Route</span>&gt;</span>*/&#125;<br><span class="hljs-tag">&lt;/<span class="hljs-name">Switch</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+    </div>
+
+    <div class="article-footer">
+      <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react路由/">#react路由</a></li></ul>
+    </div>
+
+    <div class="article-navs">
+      
+<nav class="card-container card-article-nav">
+  <div class="card-wrap">
+    
+      <div class="card-item img">
+        <article>
+          
+            <div class="card-cover" style="background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1573918195539&amp;di=12cd9e14581552a6cc5dea465f9cf46c&amp;imgtype=0&amp;src=http%3A%2F%2Fpic40.nipic.com%2F20140423%2F18554809_131522409190_2.jpg)"></div>
+          
+          <a class="card-link article-nav-link" href="/2019/11/14/弹性盒子模型/"></a>
+          <div class="article-nav-caption">Newer</div>
+          <div class="article-nav-title">弹性盒子模型</div>
+        </article>
+      </div>
+    
+    
+      <div class="card-item img">
+        <article>
+          
+            <div class="card-cover" style="background-image: url(https://qiniu.miiiku.xyz/src/images/banner-message.jpg)"></div>
+          
+          <a class="card-link article-nav-link" href="/2019/11/02/‘node-vue-mongodb部署项目/"></a>
+          <div class="article-nav-caption">Older</div>
+          <div class="article-nav-title">‘node+vue+mongodb部署项目</div>
+        </article>
+      </div>
+    
+  </div>
+</nav>
+
+    </div>
+    
+    
+
+  
+  <div class="valine-container">
+    <div id="valine_thread" class="valine-thread"></div>
+  </div>
+
+  
+  
+
+
+  </article>
+</div></section>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    <p>&copy; 2019 <a href="/" target="_blank">白羊座的梦</a></p>
+
+    
+      <p id="hitokoto"></p>
+      <script src="https://v1.hitokoto.cn/?c=a&amp;encode=js&select=%23hitokoto" defer></script>
+    
+
+    
+
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank">flex-block</a></p>
+  </div>
+</footer>
+  </div>
+
+  
+  <!-- 尾部其他内容 -->
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+<!-- dplayer 视频 start -->
+<link rel="stylesheet" href="/lib/DPlayer.min.css">
+<script src="/lib/DPlayer.min.js"></script>
+<script type="text/javascript">
+  const dplayer = document.querySelectorAll(".dplayer");
+  dplayer && initDPlayer(dplayer);
+  function initDPlayer(els) {
+    let elsArr = Array.from(els);
+    elsArr.forEach(el => {
+      let url = el.dataset.url;
+      let cover = el.dataset.cover;
+      new DPlayer({
+        container: el,
+        video: { url: url, pic: cover },
+        theme: "#b7daff",
+        autoplay: false,
+        loop: false,
+        mutex: true,
+      });
+    });
+  }
+</script>
+<!-- dplayer 视频 end -->
+
+
+<!-- waterfall 瀑布流 start -->
+<script src="/lib/waterfall.min.js"></script>
+<script type="text/javascript">
+
+const waterfallDOM = document.querySelector(".waterfall-container");
+
+if (waterfallDOM) {
+  initCss();
+  initWaterfall(".waterfall-container", waterfallDOM);
+}
+
+function initWaterfall(selector, el) {
+  const options = {};
+  if (Object.keys(el.dataset).length > 0) {
+    for (let k in el.dataset) {
+      options[k] = el.dataset[k];
+    }
+  }
+  waterfall(selector, options);
+}
+
+function initCss() {
+  let cssStyle = document.createElement("style")
+  cssStyle.innerText = `.waterfall-container p { display: block; border-radius: 4px; overflow: hidden; margin: 0; }`
+  document.head.appendChild(cssStyle);
+}
+</script>
+<!-- waterfall 瀑布流 end -->
+
+
+<script src="/js/script.js"></script>
+</body>
+</html>
