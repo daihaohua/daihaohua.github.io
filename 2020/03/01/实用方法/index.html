@@ -19,7 +19,7 @@
 
   
 
-  <title>实用方法 | 首页</title>
+  <title>函数节流和防抖封装 | 首页</title>
 
   
 
@@ -98,7 +98,7 @@
           <div class="type-wrap">
             
           </div>
-          <h1 class="title-wrap">实用方法</h1>
+          <h1 class="title-wrap">函数节流和防抖封装</h1>
           <div class="meta-wrap">
             <strong>白羊座的梦</strong>
             <span>发布于</span>
@@ -126,8 +126,10 @@
     
 
     <div class="article-entry">
-      <h1 id="实用方法"><a href="#实用方法" class="headerlink" title="实用方法"></a>实用方法</h1><a id="more"></a>
-<h2 id="函数防抖封装"><a href="#函数防抖封装" class="headerlink" title="函数防抖封装"></a>函数防抖封装</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs undefined">export <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">debounce</span><span class="hljs-params">(func,delay)</span></span>&#123;<span class="hljs-comment">//函数防抖</span><br>    let timer = <span class="hljs-literal">null</span>;<br>    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(<span class="hljs-rest_arg">...args</span>)</span></span>&#123;<span class="hljs-comment">//使用闭包</span><br>	 <span class="hljs-keyword">if</span>(timer) clearTimeout(timer);<br>	 timer  = setTimeout(()=&gt;&#123;<br>	     <span class="hljs-comment">// console.log(this);</span><br>	     func.apply(<span class="hljs-keyword">this</span>,args);<br>	 &#125;,delay)<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+      <h1 id="函数节流和防抖封装"><a href="#函数节流和防抖封装" class="headerlink" title="函数节流和防抖封装"></a>函数节流和防抖封装</h1><a id="more"></a>
+<h2 id="封装节流函数"><a href="#封装节流函数" class="headerlink" title="封装节流函数"></a>封装节流函数</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs js">	<span class="hljs-comment">/*<br>    函数节流:<br>        一个频繁触发的函数 在规定的时间内 <br>        只让第一次函数执行有效  <br>        之后的函数执行都不生效<br><br>*/</span><br>        <span class="hljs-keyword">var</span> age = <span class="hljs-number">29</span>;<br>        <span class="hljs-keyword">let</span> name = <span class="hljs-string">"豪华"</span>  <br>        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">throttle</span> (<span class="hljs-params">fn,delay</span>)</span>&#123; <span class="hljs-comment">//fn是需要降低执行频率的函数 </span><br>            <span class="hljs-keyword">let</span> start = <span class="hljs-number">0</span>  <span class="hljs-comment">//默认值</span><br>            <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">...args</span>)</span>&#123;  <span class="hljs-comment">//this--&gt;document</span><br>                <span class="hljs-keyword">let</span> now = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()<br>                <span class="hljs-keyword">if</span>(now-start&gt;=delay)&#123;   <span class="hljs-comment">//如果两次时间差大于规定时间  才执行函数</span><br>                    fn.call(<span class="hljs-keyword">this</span>,...args)   <span class="hljs-comment">//使this指向调用他的函数;</span><br>                    start = now<span class="hljs-comment">//更新起始时间</span><br>                &#125;<br>            &#125;<br>        &#125;<br><br><br>        <span class="hljs-keyword">let</span> xxx = throttle(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>&#123; <span class="hljs-comment">//e 是xxx函数的</span><br>           <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>,<span class="hljs-built_in">arguments</span>,age,name);<br>        &#125;,<span class="hljs-number">1000</span>)<br><br>        <span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">'click'</span>,xxx)<br></code></pre></td></tr></table></figure>
+
+<h2 id="封装防抖函数"><a href="#封装防抖函数" class="headerlink" title="封装防抖函数"></a>封装防抖函数</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs js">	<span class="hljs-comment">/*<br>	    函数防抖:<br>		一个频繁触发的函数 在规定的时间内 <br>		     只让最后一次函数执行生效  <br>		     之前的函数执行的都不生效<br><br>*/</span><br>	<span class="hljs-comment">//函数防抖</span><br>	<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">debounce</span>(<span class="hljs-params">func,delay</span>)</span>&#123;<br>	    <span class="hljs-keyword">let</span> timer = <span class="hljs-literal">null</span>;<br>	    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">...args</span>)</span>&#123;<span class="hljs-comment">//使用闭包</span><br>		 <span class="hljs-keyword">if</span>(timer) clearTimeout(timer);<br>		 timer  = setTimeout(<span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>&#123;<br>		     func.apply(<span class="hljs-keyword">this</span>,args);<span class="hljs-comment">//这个主要使用来传参的</span><br>		 &#125;,delay)<br>		 <span class="hljs-comment">// timer = setTimeout(func,delay)//不需要传参就用这个</span><br>	    &#125;<br>	&#125;<br><br>	 <span class="hljs-comment">//使用防抖</span><br>          <span class="hljs-keyword">const</span> refresh = debounce(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>&#123;<br>		   <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>,e);<br>	   &#125;,<span class="hljs-number">50</span>);<br>	    <span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">'click'</span>,refresh);<br>	    <br>	    <br>		<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">debounce</span>(<span class="hljs-params">fn,delay</span>)</span>&#123;<br>		     <span class="hljs-keyword">let</span> timer = <span class="hljs-literal">null</span><br>		     <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">...args</span>)</span>&#123;  <span class="hljs-comment">//this --&gt; document</span><br>			  clearTimeout(timer)<br>			  timer = setTimeout(fn.bind(<span class="hljs-keyword">this</span>,...args),delay)  <span class="hljs-comment">//...args是展开</span><br>		     &#125;<br>		 &#125;<br><br>		 <span class="hljs-keyword">let</span> xxx = debounce(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>&#123;   <span class="hljs-comment">//e 是xxx函数的</span><br>		     <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>,)<br>		 &#125;,<span class="hljs-number">2000</span>)<br><br>		 <span class="hljs-built_in">document</span>.addEventListener(<span class="hljs-string">'click'</span>,xxx)<br></code></pre></td></tr></table></figure>
 
 
     </div>
@@ -141,8 +143,10 @@
 <nav class="card-container card-article-nav">
   <div class="card-wrap">
     
-      <div class="card-item">
+      <div class="card-item img">
         <article>
+          
+            <div class="card-cover" style="background-image: url(http://admin.baiyang.work/img/slideShow/slideShow_1582881046868.jpg)"></div>
           
           <a class="card-link article-nav-link" href="/2020/03/09/封装一些数组的方法/"></a>
           <div class="article-nav-caption">Newer</div>
@@ -151,8 +155,10 @@
       </div>
     
     
-      <div class="card-item">
+      <div class="card-item img">
         <article>
+          
+            <div class="card-cover" style="background-image: url(http://admin.baiyang.work/img/slideShow/slideShow_1582880958359.jpg)"></div>
           
           <a class="card-link article-nav-link" href="/2020/01/29/“node路由模块化”/"></a>
           <div class="article-nav-caption">Older</div>
