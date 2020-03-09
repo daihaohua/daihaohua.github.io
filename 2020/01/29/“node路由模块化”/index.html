@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  
+    <meta name="description" content="这是一个大三学员的技术博客">
+  
+
+  
+
+  
+    <meta name="author" content="白羊座的梦">
+  
+
+  
+
+  
+
+  <title>“node路由模块化” | 首页</title>
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link href="https://cdn.bootcss.com/highlight.js/9.15.6/styles/monokai.min.css" rel="stylesheet">
+  
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="container">
+    <!-- header -->
+<header class="header">
+  <div class="header-container ">
+    <nav class="header-navbar">
+      <div class="header-navbar-left">
+        <h1 class="header-navbar-logo">
+          <a href="/">
+            
+              <img src="https://qiniu.miiiku.xyz/src/images/logo.png" alt="首页">
+            
+          </a>
+        </h1>
+      </div>
+      <div class="header-navbar-right">
+        <div class="header-navbar-btn">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul class="header-navbar-list">
+          
+            <li class="header-navbar-item"><a href="/">首页</a></li>
+          
+            <li class="header-navbar-item"><a href="/links">友链</a></li>
+          
+            <li class="header-navbar-item"><a href="/tags">标签</a></li>
+          
+            <li class="header-navbar-item"><a href="/about">关于</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+    <section id="main"><!-- 文章详情页 -->
+
+
+<!-- banner container -->
+<div class="banner-container">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+      <div class="banner-content post-content no-post-image">
+        <div class="post-text">
+          <div class="type-wrap">
+            
+          </div>
+          <h1 class="title-wrap">“node路由模块化”</h1>
+          <div class="meta-wrap">
+            <strong>白羊座的梦</strong>
+            <span>发布于</span>
+            
+  <a href="javascript:;" class="article-date">
+    <time datetime="2020-01-29T07:51:34.000Z" itemprop="datePublished">2020-01-29</time>
+  </a>
+
+          </div>
+        </div>
+      </div>
+    
+  
+
+  
+  
+
+</div>
+
+<!-- 文章内容 -->
+
+<div class="body-container">
+  <article id="article-content" class="main-container article-content">
+    
+    
+
+    <div class="article-entry">
+      <h1 id="node-app获取路由配置"><a href="#node-app获取路由配置" class="headerlink" title="node app获取路由配置"></a>node app获取路由配置</h1><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><code class="hljs undefined">	<span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">"express"</span>);<br><span class="hljs-keyword">const</span> fs  = <span class="hljs-built_in">require</span>(<span class="hljs-string">"fs"</span>);<br><span class="hljs-keyword">const</span> path =<span class="hljs-built_in">require</span>(<span class="hljs-string">"path"</span>);<br><br><span class="hljs-keyword">const</span> app = express();<br><br><span class="hljs-comment">// 可以通过require导出</span><br><span class="hljs-comment">// const User  = require("./mock/user");</span><br><span class="hljs-comment">// const home  = require("./mock/home");</span><br><br><span class="hljs-comment">//也可以通过读取模块</span><br><span class="hljs-comment">// 获取mock路径</span><br><span class="hljs-keyword">const</span> mockPath =  path.join(__dirname,<span class="hljs-string">"mock"</span>);<br><span class="hljs-comment">//存放mock数据的</span><br><span class="hljs-keyword">let</span> mockDate = &#123;&#125;;<br><span class="hljs-comment">// console.log(mockPath);</span><br><span class="hljs-comment">//读取文件夹</span><br><span class="hljs-comment">// fs.readdir(mockPath,(err,filename)=&gt;&#123;</span><br><span class="hljs-comment">//     console.log(filename);</span><br><span class="hljs-comment">// &#125;)</span><br><span class="hljs-keyword">const</span> filename  = fs.readdirSync(mockPath);<br><span class="hljs-comment">// console.log(filename);</span><br><br>filename.forEach(<span class="hljs-function"><span class="hljs-params">item</span> =&gt;</span> &#123;<br>    <span class="hljs-comment">//拿到对象的内容</span><br>    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">require</span>(path.join(mockPath,item)));<br>    <span class="hljs-comment">//通过对象合并,把数据合并到一个对象中来</span><br>    <span class="hljs-built_in">Object</span>.assign(mockDate,<span class="hljs-built_in">require</span>(path.join(mockPath,item)));<br>    <span class="hljs-comment">//这个是错误的写法；</span><br>    <span class="hljs-comment">// mockDate.assign(require(path.join(mockPath,item)));</span><br><br>&#125;);<br><span class="hljs-comment">// console.log(mockDate);</span><br><br><span class="hljs-comment">//设置接口</span><br><span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> key <span class="hljs-keyword">in</span> mockDate)&#123;<br>    <span class="hljs-comment">// console.log(key,mockDate[key]);</span><br>    <span class="hljs-keyword">let</span> [method,url] = key.split(<span class="hljs-string">" "</span>);<br>    method = method.toLowerCase();<br>    <span class="hljs-comment">// console.log(method,url,mockDate[key]);</span><br>    <span class="hljs-comment">//把格式化数据放到app接口中；</span><br>    app[method](url,mockDate[key]);<br>&#125;<br><span class="hljs-comment">//注意:这种方式比require好在如果添加了文件就不需要导入了。直接就可以读取所有；</span><br><br><span class="hljs-comment">// 接口</span><br>app.get(<span class="hljs-string">"/"</span>,<span class="hljs-function">(<span class="hljs-params">req,res</span>)=&gt;</span>&#123;<br>    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"5000监听完毕"</span>);<br>    res.send(<span class="hljs-string">"成功"</span>)<br>&#125;)<br><br><span class="hljs-comment">//监听端口</span><br><span class="hljs-keyword">const</span> prot = <span class="hljs-number">5000</span><br>app.listen(prot,<span class="hljs-function">(<span class="hljs-params">err</span>)=&gt;</span>&#123;<br>    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`端口<span class="hljs-subst">$&#123;prot&#125;</span>监听完毕`</span>);<br>&#125;)<br></code></pre></td></tr></table></figure>
+
+<h1 id="node路由配置文件"><a href="#node路由配置文件" class="headerlink" title="node路由配置文件"></a>node路由配置文件</h1><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs undefined">//暴露出一个路由配置对象；<br>module.exports = &#123;<br>    <span class="hljs-string">"<span class="hljs-keyword">GET</span> /home"</span>:function(req,res)&#123;<br>	 console.log(<span class="hljs-string">"/home"</span>);<br>	 res.send(<span class="hljs-string">"/home"</span>)<br>    &#125;,<br>    <span class="hljs-string">"<span class="hljs-keyword">GET</span> /home/search"</span>:function(req,res)&#123;<br>	 console.log(<span class="hljs-string">"/home/search"</span>);<br>	 res.send(<span class="hljs-string">"/home/search"</span>)<br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+    </div>
+
+    <div class="article-footer">
+      
+    </div>
+
+    <div class="article-navs">
+      
+<nav class="card-container card-article-nav">
+  <div class="card-wrap">
+    
+      <div class="card-item img">
+        <article>
+          
+            <div class="card-cover" style="background-image: url(http://pic77.nipic.com/file/20150916/21798558_161551817620_2.jpg)"></div>
+          
+          <a class="card-link article-nav-link" href="/2020/03/01/实用方法/"></a>
+          <div class="article-nav-caption">Newer</div>
+          <div class="article-nav-title">实用方法</div>
+        </article>
+      </div>
+    
+    
+      <div class="card-item img">
+        <article>
+          
+            <div class="card-cover" style="background-image: url(http://pic77.nipic.com/file/20150916/21798558_161551817620_2.jpg)"></div>
+          
+          <a class="card-link article-nav-link" href="/2019/11/22/高阶组件/"></a>
+          <div class="article-nav-caption">Older</div>
+          <div class="article-nav-title">高阶组件</div>
+        </article>
+      </div>
+    
+  </div>
+</nav>
+
+    </div>
+    
+    
+
+  
+  <div class="valine-container">
+    <div id="valine_thread" class="valine-thread"></div>
+  </div>
+
+  
+  
+
+
+  </article>
+</div></section>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    <p>&copy; 2020 <a href="/" target="_blank">白羊座的梦</a></p>
+
+    
+      <p id="hitokoto"></p>
+      <script src="https://v1.hitokoto.cn/?c=a&amp;encode=js&select=%23hitokoto" defer></script>
+    
+
+    
+
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank">flex-block</a></p>
+  </div>
+</footer>
+  </div>
+
+  
+  <!-- 尾部其他内容 -->
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+<!-- dplayer 视频 start -->
+<link rel="stylesheet" href="/lib/DPlayer.min.css">
+<script src="/lib/DPlayer.min.js"></script>
+<script type="text/javascript">
+  const dplayer = document.querySelectorAll(".dplayer");
+  dplayer && initDPlayer(dplayer);
+  function initDPlayer(els) {
+    let elsArr = Array.from(els);
+    elsArr.forEach(el => {
+      let url = el.dataset.url;
+      let cover = el.dataset.cover;
+      new DPlayer({
+        container: el,
+        video: { url: url, pic: cover },
+        theme: "#b7daff",
+        autoplay: false,
+        loop: false,
+        mutex: true,
+      });
+    });
+  }
+</script>
+<!-- dplayer 视频 end -->
+
+
+<!-- waterfall 瀑布流 start -->
+<script src="/lib/waterfall.min.js"></script>
+<script type="text/javascript">
+
+const waterfallDOM = document.querySelector(".waterfall-container");
+
+if (waterfallDOM) {
+  initCss();
+  initWaterfall(".waterfall-container", waterfallDOM);
+}
+
+function initWaterfall(selector, el) {
+  const options = {};
+  if (Object.keys(el.dataset).length > 0) {
+    for (let k in el.dataset) {
+      options[k] = el.dataset[k];
+    }
+  }
+  waterfall(selector, options);
+}
+
+function initCss() {
+  let cssStyle = document.createElement("style")
+  cssStyle.innerText = `.waterfall-container p { display: block; border-radius: 4px; overflow: hidden; margin: 0; }`
+  document.head.appendChild(cssStyle);
+}
+</script>
+<!-- waterfall 瀑布流 end -->
+
+
+<script src="/js/script.js"></script>
+</body>
+</html>

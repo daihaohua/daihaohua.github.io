@@ -137,22 +137,52 @@
 
 <h3 id="7-通过vim命令可以打开vim编辑器-不建议使用"><a href="#7-通过vim命令可以打开vim编辑器-不建议使用" class="headerlink" title="7.通过vim命令可以打开vim编辑器(不建议使用)"></a>7.通过vim命令可以打开vim编辑器(不建议使用)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vim 文件名称     打开vim编辑器开始编辑；<br></code></pre></td></tr></table></figure>
 
-<h3 id="8-把项目添加到缓存区"><a href="#8-把项目添加到缓存区" class="headerlink" title="8.把项目添加到缓存区"></a>8.把项目添加到缓存区</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add 文件名称，  添加到缓存区<br></code></pre></td></tr></table></figure>
+<h3 id="8-把项目添加到缓存区"><a href="#8-把项目添加到缓存区" class="headerlink" title="8.把项目添加到缓存区"></a>8.把项目添加到缓存区</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add 文件名称，  //添加到缓存区<br>git add .          //添加所有文件到缓存区<br></code></pre></td></tr></table></figure>
 
-<h3 id="9-把项目添加到缓存区"><a href="#9-把项目添加到缓存区" class="headerlink" title="9.把项目添加到缓存区"></a>9.把项目添加到缓存区</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git commit  文件名 保存到本地库<br></code></pre></td></tr></table></figure>
+<h3 id="9-把项目添加到分支上"><a href="#9-把项目添加到分支上" class="headerlink" title="9.把项目添加到分支上"></a>9.把项目添加到分支上</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git commit  文件名 //保存到分支上<br></code></pre></td></tr></table></figure>
 
-<h3 id="9-git-commit-m-“test-github”-文件名-加上-m-“test-github”就不用了进入vim编辑器，进去vim编辑器主要是添加修改的描述文件，你也可以直接通过-m-“描述”-这个方式来就不用进入vim编辑器；"><a href="#9-git-commit-m-“test-github”-文件名-加上-m-“test-github”就不用了进入vim编辑器，进去vim编辑器主要是添加修改的描述文件，你也可以直接通过-m-“描述”-这个方式来就不用进入vim编辑器；" class="headerlink" title="9.git commit -m “test github” 文件名    加上 -m “test github”就不用了进入vim编辑器，进去vim编辑器主要是添加修改的描述文件，你也可以直接通过    -m “描述”   这个方式来就不用进入vim编辑器；"></a>9.git commit -m “test github” 文件名    加上 -m “test github”就不用了进入vim编辑器，进去vim编辑器主要是添加修改的描述文件，你也可以直接通过    -m “描述”   这个方式来就不用进入vim编辑器；</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git commit -m <span class="hljs-string">"保存到本地库的描述"</span> 文件名<br></code></pre></td></tr></table></figure>
+<h3 id="10-git-commit-m-“test-github”-文件名-加上-m-“test-github”就不用了进入vim编辑器，进去vim编辑器主要是添加修改的描述文件，你也可以直接通过-m-“描述”-这个方式来就不用进入vim编辑器；"><a href="#10-git-commit-m-“test-github”-文件名-加上-m-“test-github”就不用了进入vim编辑器，进去vim编辑器主要是添加修改的描述文件，你也可以直接通过-m-“描述”-这个方式来就不用进入vim编辑器；" class="headerlink" title="10.git commit -m “test github” 文件名    加上 -m “test github”就不用了进入vim编辑器，进去vim编辑器主要是添加修改的描述文件，你也可以直接通过    -m “描述”   这个方式来就不用进入vim编辑器；"></a>10.git commit -m “test github” 文件名    加上 -m “test github”就不用了进入vim编辑器，进去vim编辑器主要是添加修改的描述文件，你也可以直接通过    -m “描述”   这个方式来就不用进入vim编辑器；</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">//保存到分支上 保存上之后会显示变化的部分，视频，音频等二进制文件不能观察，只能观察大小；<br>git commit -m <span class="hljs-string">"保存到本地库的描述"</span> 文件名<br>git commit -m<span class="hljs-string">"保存到本地库的描述"</span><br></code></pre></td></tr></table></figure>
 
-<h3 id="10-查看是否有别名"><a href="#10-查看是否有别名" class="headerlink" title="10.查看是否有别名"></a>10.查看是否有别名</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git remote -v，<br></code></pre></td></tr></table></figure>
+<h3 id="查看当前仓库里所有文件的状态"><a href="#查看当前仓库里所有文件的状态" class="headerlink" title="查看当前仓库里所有文件的状态"></a>查看当前仓库里所有文件的状态</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">git status         //如果你还有文件还没有提交的话，就会提醒你要使用git <span class="hljs-keyword">add</span><span class="bash"> ，git commit进行提交发到分支；</span><br></code></pre></td></tr></table></figure>
 
-<h3 id="11-保存远程仓库地址"><a href="#11-保存远程仓库地址" class="headerlink" title="11.保存远程仓库地址"></a>11.保存远程仓库地址</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git remote add origin  远程库地址     把远程库地址更改为 origin<br></code></pre></td></tr></table></figure>
+<h3 id="查看一个文件修改了哪一部分"><a href="#查看一个文件修改了哪一部分" class="headerlink" title="查看一个文件修改了哪一部分"></a>查看一个文件修改了哪一部分</h3><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">git diff 文件名   <span class="hljs-comment">//查看一个文件修改之前和修改之后的代码；</span><br></code></pre></td></tr></table></figure>
 
-<h3 id="12-推送到gitgub的master分支中"><a href="#12-推送到gitgub的master分支中" class="headerlink" title="12.推送到gitgub的master分支中"></a>12.推送到gitgub的master分支中</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git  push origin master     从本地的分支master推送到远程的master中<br></code></pre></td></tr></table></figure>
+<h3 id="查看提交历史"><a href="#查看提交历史" class="headerlink" title="查看提交历史"></a>查看提交历史</h3><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">git <span class="hljs-built_in">log</span>  <span class="hljs-comment">//必须要把文件传到分支上才可以有相关的日志；</span><br></code></pre></td></tr></table></figure>
 
-<h3 id="13-查看文件内容；"><a href="#13-查看文件内容；" class="headerlink" title="13.查看文件内容；"></a>13.查看文件内容；</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">cat 文件名<br></code></pre></td></tr></table></figure>
+<h3 id="让日志变得更漂亮"><a href="#让日志变得更漂亮" class="headerlink" title="#让日志变得更漂亮"></a>#让日志变得更漂亮</h3><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">git <span class="hljs-built_in">log</span> <span class="hljs-comment">--pretty=oneline</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="回到上一个版本"><a href="#回到上一个版本" class="headerlink" title="回到上一个版本"></a>回到上一个版本</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-comment">#上一个是HEAD^ 回到上上一个是HEAD^^ 回退到10个版本以前HEAD~10  HEAD^也可以写id标记的前八到前十个字符；</span><br>git <span class="hljs-keyword">reset</span> <span class="hljs-comment">--hard HEAD^</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="返回用来的版本-回到某个特定的版本"><a href="#返回用来的版本-回到某个特定的版本" class="headerlink" title="返回用来的版本(回到某个特定的版本)"></a>返回用来的版本(回到某个特定的版本)</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">git <span class="hljs-keyword">reset</span> <span class="hljs-comment">--hard 版本号</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="查看所有使用过的命令历史-日志"><a href="#查看所有使用过的命令历史-日志" class="headerlink" title="查看所有使用过的命令历史(日志)"></a>查看所有使用过的命令历史(日志)</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-attribute">git reflog</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-comment">#让文件回到最近一次添加或提交时的样子  注意：这是对工作区的修改</span><br><span class="hljs-attribute">git</span> restore 文件名<br></code></pre></td></tr></table></figure>
+
+<h3 id="撤销已添加到暂存区的修改"><a href="#撤销已添加到暂存区的修改" class="headerlink" title="撤销已添加到暂存区的修改"></a>撤销已添加到暂存区的修改</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs undefined">注意：这是对工作区的修改<br><span class="hljs-comment">#撤销单个</span><br>	git <span class="hljs-keyword">restore</span> <span class="hljs-comment">--staged 文件名</span><br><span class="hljs-comment">#撤销多个</span><br>	git <span class="hljs-keyword">restore</span> <span class="hljs-comment">--staged .</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">git <span class="hljs-keyword">rm</span> 文件名； <span class="hljs-comment">//这个是把所有的这个文件名删除，包过工作区和暂存区一起删除；</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="11-查看是否有别名"><a href="#11-查看是否有别名" class="headerlink" title="11.查看是否有别名"></a>11.查看是否有别名</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git remote -v，<br></code></pre></td></tr></table></figure>
+
+<h3 id="12-保存远程仓库地址"><a href="#12-保存远程仓库地址" class="headerlink" title="12.保存远程仓库地址"></a>12.保存远程仓库地址</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git remote add origin  远程库地址     把远程库地址更改为 origin<br></code></pre></td></tr></table></figure>
+
+<h3 id="13-推送到gitgub的master分支中"><a href="#13-推送到gitgub的master分支中" class="headerlink" title="13.推送到gitgub的master分支中"></a>13.推送到gitgub的master分支中</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git  push origin master     从本地的分支master推送到远程的master中<br></code></pre></td></tr></table></figure>
+
+<h3 id="14-查看文件内容；"><a href="#14-查看文件内容；" class="headerlink" title="14.查看文件内容；"></a>14.查看文件内容；</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">cat 文件名<br></code></pre></td></tr></table></figure>
 
 <h2 id="git的克隆操作"><a href="#git的克隆操作" class="headerlink" title="git的克隆操作"></a>git的克隆操作</h2><h3 id="1-拿到github的仓库地址"><a href="#1-拿到github的仓库地址" class="headerlink" title="1.拿到github的仓库地址"></a>1.拿到github的仓库地址</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> 远程库地址 (克隆还会有三个操作)<br>    ​	1.完整的吧远程库下载到本地<br>    <br>    ​	2.创建origin远程名地址<br>    <br>    ​	3.初始化本地库<br></code></pre></td></tr></table></figure>
 
+<hr>
+<h2 id="生成秘钥的方法"><a href="#生成秘钥的方法" class="headerlink" title="生成秘钥的方法"></a>生成秘钥的方法</h2><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-number">1</span>.创建`SSH Key`<br>#我们把项目放到github上托管后，其他人也可以看到和下载，为了防止别人修改我们在远程仓库里的代码，<br>github使用一种加密认证，只有认证通过才可以修改远程仓库里的代码。<br>那别人下载我们的代码到自己的电脑上之后可不可以在他的电脑上修改我们的代码呢？这个当然可以，<br>我们无法控制，我们能做的是不让他改我们远程仓库里的代码<br></code></pre></td></tr></table></figure>
+
+<p><strong>ssh-keygen -t rsa -C “你的邮箱地址”</strong></p>
+<h2 id="首先你要知道自己的sshkey是什么"><a href="#首先你要知道自己的sshkey是什么" class="headerlink" title="首先你要知道自己的sshkey是什么"></a>首先你要知道自己的sshkey是什么</h2><p><strong>cat ~/.ssh/id_rsa.pub</strong></p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs undefined">cat ~<span class="hljs-string">/.ssh/id_rsa.pub</span><br>这个是只查看 本机管理员下面的<span class="hljs-string">.ssh</span>下面的id_rsa.pub文件内容；<br>~是只管理员目录；<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>主要如果要想正常推送的话，必须要生成秘钥，让github信任这台电脑。</p>
+</blockquote>
 
     </div>
 
@@ -208,7 +238,7 @@
     <!-- footer container -->
 <footer id="footer" class="footer">
   <div class="footer-container">
-    <p>&copy; 2019 <a href="/" target="_blank">白羊座的梦</a></p>
+    <p>&copy; 2020 <a href="/" target="_blank">白羊座的梦</a></p>
 
     
       <p id="hitokoto"></p>

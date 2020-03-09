@@ -129,7 +129,7 @@
       <h1 id="高阶组件"><a href="#高阶组件" class="headerlink" title="高阶组件"></a>高阶组件</h1><a id="more"></a>
 <h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs undefined">当一个函数A是接受函数参数B时  则函数A就是高阶函数<br>               数组的sort map <span class="hljs-built_in"> filter </span>every some<br>当一个函数A返回了函数B时   则函数A就是高阶函数<br>	 函数的bind<br></code></pre></td></tr></table></figure>
 
-<h2 id="高阶组件-1"><a href="#高阶组件-1" class="headerlink" title="高阶组件"></a>高阶组件</h2><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs undefined">高阶组件是  接受了组件A(基础组件)作为参数并且返回了一个组件<span class="hljs-keyword">B的函数、<br></span>        属性代理指的是  在返回的组件<span class="hljs-keyword">B中定义组件A(基础组件)需要的属性 </span>并且传递给基础组件<br></code></pre></td></tr></table></figure>
+<h2 id="高阶组件-1"><a href="#高阶组件-1" class="headerlink" title="高阶组件"></a>高阶组件</h2><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs undefined">高阶组件是  接受了组件A(基础组件)作为参数并且返回了一个组件<span class="hljs-keyword">B的函数、<br></span>   属性代理指的是  在返回的组件<span class="hljs-keyword">B中定义组件A(基础组件)需要的属性 </span>并且传递给基础组件<br></code></pre></td></tr></table></figure>
 
 <h2 id="高阶组件案例"><a href="#高阶组件案例" class="headerlink" title="高阶组件案例"></a>高阶组件案例</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs undefined">const &#123;<span class="hljs-type">Component</span>&#125; = <span class="hljs-type">React</span><br> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Heaven</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span></span>&#123;<br>     state =  &#123;<br>         name:<span class="hljs-symbol">'LongShortPart</span>y',<br>         arr :[<span class="hljs-symbol">'htm</span>l',<span class="hljs-symbol">'cs</span>s',<span class="hljs-symbol">'j</span>s',<span class="hljs-symbol">'nod</span>e',<span class="hljs-symbol">'reac</span>t']<br>     &#125;<br>     render()&#123;<br>         const &#123;arr&#125; = <span class="hljs-keyword">this</span>.state<br>         <span class="hljs-keyword">return</span> (<br>             &lt;ul&gt;<br>                 &#123;<br>                     arr.map(item=&gt;&lt;li key=&#123;item&#125;&gt;&#123;item&#125;&lt;/li&gt;)<br>                 &#125;<br>             &lt;/ul&gt;<br>         )<br>     &#125;<br> &#125;<br><br> const reverseInherit = (<span class="hljs-type">BaseComponent</span>)=&gt;&#123;<br>     <span class="hljs-keyword">return</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">BaseComponent</span></span>&#123; <span class="hljs-comment">//返回了一个继承了  基础组件的组件</span><br>         render()&#123;<br>             console.log(<span class="hljs-keyword">this</span>.state)<br>             <span class="hljs-keyword">return</span> <span class="hljs-keyword">super</span>.render()<br>         &#125;<br>     &#125;<br> &#125;<br> const <span class="hljs-type">Result1</span> = reverseInherit(<span class="hljs-type">Heaven</span>)<br><br>  <span class="hljs-type">ReactDOM</span>.render(&lt;<span class="hljs-type">Result1</span> /&gt;,document.getElementById(<span class="hljs-symbol">'bo</span>x'))<br></code></pre></td></tr></table></figure>
 
@@ -146,6 +146,15 @@
       
 <nav class="card-container card-article-nav">
   <div class="card-wrap">
+    
+      <div class="card-item">
+        <article>
+          
+          <a class="card-link article-nav-link" href="/2020/01/29/“node路由模块化”/"></a>
+          <div class="article-nav-caption">Newer</div>
+          <div class="article-nav-title">“node路由模块化”</div>
+        </article>
+      </div>
     
     
       <div class="card-item img">
@@ -181,7 +190,7 @@
     <!-- footer container -->
 <footer id="footer" class="footer">
   <div class="footer-container">
-    <p>&copy; 2019 <a href="/" target="_blank">白羊座的梦</a></p>
+    <p>&copy; 2020 <a href="/" target="_blank">白羊座的梦</a></p>
 
     
       <p id="hitokoto"></p>
