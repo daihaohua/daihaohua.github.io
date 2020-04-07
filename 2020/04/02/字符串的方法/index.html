@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  
+    <meta name="description" content="这是一个大三学员的技术博客">
+  
+
+  
+
+  
+    <meta name="author" content="白羊座的梦">
+  
+
+  
+
+  
+
+  <title>字符串的方法 | 首页</title>
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link href="https://cdn.bootcss.com/highlight.js/9.15.6/styles/monokai.min.css" rel="stylesheet">
+  
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="container">
+    <!-- header -->
+<header class="header">
+  <div class="header-container ">
+    <nav class="header-navbar">
+      <div class="header-navbar-left">
+        <h1 class="header-navbar-logo">
+          <a href="/">
+            
+              <img src="https://qiniu.miiiku.xyz/src/images/logo.png" alt="首页">
+            
+          </a>
+        </h1>
+      </div>
+      <div class="header-navbar-right">
+        <div class="header-navbar-btn">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul class="header-navbar-list">
+          
+            <li class="header-navbar-item"><a href="/">首页</a></li>
+          
+            <li class="header-navbar-item"><a href="/links">友链</a></li>
+          
+            <li class="header-navbar-item"><a href="/tags">标签</a></li>
+          
+            <li class="header-navbar-item"><a href="/about">关于</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+    <section id="main"><!-- 文章详情页 -->
+
+
+<!-- banner container -->
+<div class="banner-container">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+      <div class="banner-content post-content is-post-image">
+        <div class="post-image" style="background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1585835047425&amp;di=509344ce9675d9bfe6dad356486a20fa&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.52z.com%2Fupload%2Fnews%2Fimage%2F20200120%2F20200120110528_11540.jpg)"></div>
+        <div class="post-text">
+          <div class="type-wrap">
+            
+          </div>
+          <h1 class="title-wrap">字符串的方法</h1>
+          <div class="meta-wrap">
+            <strong>白羊座的梦</strong>
+            <span>发布于</span>
+            
+  <a href="javascript:;" class="article-date">
+    <time datetime="2020-04-02T10:54:55.000Z" itemprop="datePublished">2020-04-02</time>
+  </a>
+
+          </div>
+        </div>
+      </div>
+    
+  
+
+  
+  
+
+</div>
+
+<!-- 文章内容 -->
+
+<div class="body-container">
+  <article id="article-content" class="main-container article-content">
+    
+    
+
+    <div class="article-entry">
+      <h1 id="字符串的方法"><a href="#字符串的方法" class="headerlink" title="字符串的方法"></a>字符串的方法</h1><a id="more"></a>
+<h2 id="es5的方法"><a href="#es5的方法" class="headerlink" title="es5的方法"></a>es5的方法</h2><h3 id="charAt方法"><a href="#charAt方法" class="headerlink" title="charAt方法"></a>charAt方法</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">获取字符串的方法:字符串名<span class="hljs-selector-attr">[下表值]</span>和字符串名<span class="hljs-selector-class">.charAt</span>(下表值);<br></code></pre></td></tr></table></figure>
+
+<h3 id="charCodeAt"><a href="#charCodeAt" class="headerlink" title="charCodeAt"></a>charCodeAt</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs undefined">charCodeAt(下表值)把字符串转化为unicode编码<span class="hljs-comment">;</span><br>列如<br>	a.<span class="hljs-number">0</span> ==&gt;<span class="hljs-number">48</span><span class="hljs-comment">;</span><br>	<span class="hljs-keyword">b.a </span>==&gt;<span class="hljs-number">97</span><span class="hljs-comment">;</span><br>	c.A ==&gt;<span class="hljs-number">65</span><span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="fromCharCode"><a href="#fromCharCode" class="headerlink" title="fromCharCode"></a>fromCharCode</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">String.fromCharCode(字符对应的编码值)把编码转化为字符串的字符<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="toUpperCase"><a href="#toUpperCase" class="headerlink" title="toUpperCase()"></a>toUpperCase()</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">获取字符串的方法:字符串名<span class="hljs-selector-attr">[下表值]</span>和字符串名<span class="hljs-selector-class">.charAt</span>(下表值);<br></code></pre></td></tr></table></figure>
+
+<h3 id="toLowerCase"><a href="#toLowerCase" class="headerlink" title="toLowerCase()"></a>toLowerCase()</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">把字符串转化为小的的<span class="hljs-comment">;如果中文就忽略不变;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="substr-n-m"><a href="#substr-n-m" class="headerlink" title="substr(n,m)"></a>substr(n,m)</h3><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">截取字符串<span class="hljs-symbol">:su</span>bstr(<span class="hljs-built_in">n</span>,m)从索引<span class="hljs-built_in">n</span>开始截取m个字符;<br></code></pre></td></tr></table></figure>
+
+<h3 id="slice-n-m"><a href="#slice-n-m" class="headerlink" title="slice(n,m)"></a>slice(n,m)</h3><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">截取字符串<span class="hljs-symbol">:sl</span>ice(<span class="hljs-built_in">n</span>,m)从索引<span class="hljs-built_in">n</span>开始截取m-<span class="hljs-built_in">n</span>个;<br></code></pre></td></tr></table></figure>
+
+<h3 id="substring-n-m"><a href="#substring-n-m" class="headerlink" title="substring(n,m)"></a>substring(n,m)</h3><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">截取字符串<span class="hljs-symbol">:su</span>bstring(<span class="hljs-built_in">n</span>,m)从<span class="hljs-built_in">n</span>开始查询截取到m-<span class="hljs-built_in">n</span>个;<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意:slice和substring直接的区别;<br>slice是支持负数的;<br>substring是不支持负数的;</p>
+</blockquote>
+<h3 id="split-字符"><a href="#split-字符" class="headerlink" title="split(字符)"></a>split(字符)</h3><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-built_in">split</span>(字符),已指定的字符来分割字符串,返回一个数组;<br>例如:var <span class="hljs-built_in">str</span> = <span class="hljs-string">"daihaohua "</span>;<br>	<span class="hljs-built_in">str</span>.<span class="hljs-built_in">split</span>(a)<span class="hljs-comment">//["d","ih","ohu",""];</span><br>注意:<span class="hljs-built_in">str</span>.<span class="hljs-built_in">split</span>(<span class="hljs-keyword">null</span>)或者<span class="hljs-built_in">str</span>.<span class="hljs-built_in">split</span>()或者<span class="hljs-built_in">str</span>.<span class="hljs-built_in">split</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="replace-x-y"><a href="#replace-x-y" class="headerlink" title="replace(x,y)"></a>replace(x,y)</h3><figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs undefined">用y来代替<span class="hljs-keyword">x</span><br>注意:如果有两个的话,就从左到右找到第一个对应的字符代替<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="trimLeft"><a href="#trimLeft" class="headerlink" title="trimLeft()"></a>trimLeft()</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">去掉字符串左边的空格<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="trimRight"><a href="#trimRight" class="headerlink" title="trimRight();"></a>trimRight();</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">去掉字符串右边的空格<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="concat-参数-参数"><a href="#concat-参数-参数" class="headerlink" title="concat(参数,参数)"></a>concat(参数,参数)</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">把所有的参数转化为字符串,然后拼接起来<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="es6新增的方法"><a href="#es6新增的方法" class="headerlink" title="es6新增的方法"></a>es6新增的方法</h2><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-number">1.</span>字符串.includes(<span class="hljs-string">"字符"</span>,n);	返回有则true,无则返回false;从指定索引开始检索字符串;<br><span class="hljs-number">2.</span>字符串.startsWith(<span class="hljs-string">"字符串"</span>,n) 以指定字符开头;<br><span class="hljs-number">3.</span>字符串.endsWith(<span class="hljs-string">"字符串"</span>,n)  	以指定字符结尾,n是指前n个字符是以指定字符结尾吗;<br><span class="hljs-number">4.</span>字符串.repeat(n)		把字符串重复n遍的新字符串;<br><span class="hljs-number">5.</span>字符串.padstart(length,指定字符串)  <br><span class="hljs-number">6.</span>字符串.isInteger()		判断一个数是不是整数;<br><span class="hljs-number">7.</span>Math.sign()	返回一个是不是正数,负数,或者<span class="hljs-number">0</span>  整数返回<span class="hljs-number">1</span>,负数返回<span class="hljs-number">-1</span>,<span class="hljs-number">0</span>返回<span class="hljs-number">0</span>;<br></code></pre></td></tr></table></figure>
+    </div>
+
+    <div class="article-footer">
+      <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/字符串的方法/">#字符串的方法</a></li></ul>
+    </div>
+
+    <div class="article-navs">
+      
+<nav class="card-container card-article-nav">
+  <div class="card-wrap">
+    
+      <div class="card-item img">
+        <article>
+          
+            <div class="card-cover" style="background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1572698621725&amp;di=f50fe244b9468641ac5f07f0e401ea2e&amp;imgtype=0&amp;src=http%3A%2F%2Fp3.ssl.qhimg.com%2Ft017c9d8f1ba39d313f.jpg)"></div>
+          
+          <a class="card-link article-nav-link" href="/2020/04/05/vue和react的性能优化/"></a>
+          <div class="article-nav-caption">Newer</div>
+          <div class="article-nav-title">vue和react的性能优化</div>
+        </article>
+      </div>
+    
+    
+      <div class="card-item img">
+        <article>
+          
+            <div class="card-cover" style="background-image: url(http://admin.baiyang.work/img/slideShow/slideShow_1582880942876.jpg)"></div>
+          
+          <a class="card-link article-nav-link" href="/2020/03/09/封装call-apply-bind方法/"></a>
+          <div class="article-nav-caption">Older</div>
+          <div class="article-nav-title">封装call,apply,bind方法</div>
+        </article>
+      </div>
+    
+  </div>
+</nav>
+
+    </div>
+    
+    
+
+  
+  <div class="valine-container">
+    <div id="valine_thread" class="valine-thread"></div>
+  </div>
+
+  
+  
+
+
+  </article>
+</div></section>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    <p>&copy; 2020 <a href="/" target="_blank">白羊座的梦</a></p>
+
+    
+      <p id="hitokoto"></p>
+      <script src="https://v1.hitokoto.cn/?c=a&amp;encode=js&select=%23hitokoto" defer></script>
+    
+
+    
+
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank">flex-block</a></p>
+  </div>
+</footer>
+  </div>
+
+  
+  <!-- 尾部其他内容 -->
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+<!-- dplayer 视频 start -->
+<link rel="stylesheet" href="/lib/DPlayer.min.css">
+<script src="/lib/DPlayer.min.js"></script>
+<script type="text/javascript">
+  const dplayer = document.querySelectorAll(".dplayer");
+  dplayer && initDPlayer(dplayer);
+  function initDPlayer(els) {
+    let elsArr = Array.from(els);
+    elsArr.forEach(el => {
+      let url = el.dataset.url;
+      let cover = el.dataset.cover;
+      new DPlayer({
+        container: el,
+        video: { url: url, pic: cover },
+        theme: "#b7daff",
+        autoplay: false,
+        loop: false,
+        mutex: true,
+      });
+    });
+  }
+</script>
+<!-- dplayer 视频 end -->
+
+
+<!-- waterfall 瀑布流 start -->
+<script src="/lib/waterfall.min.js"></script>
+<script type="text/javascript">
+
+const waterfallDOM = document.querySelector(".waterfall-container");
+
+if (waterfallDOM) {
+  initCss();
+  initWaterfall(".waterfall-container", waterfallDOM);
+}
+
+function initWaterfall(selector, el) {
+  const options = {};
+  if (Object.keys(el.dataset).length > 0) {
+    for (let k in el.dataset) {
+      options[k] = el.dataset[k];
+    }
+  }
+  waterfall(selector, options);
+}
+
+function initCss() {
+  let cssStyle = document.createElement("style")
+  cssStyle.innerText = `.waterfall-container p { display: block; border-radius: 4px; overflow: hidden; margin: 0; }`
+  document.head.appendChild(cssStyle);
+}
+</script>
+<!-- waterfall 瀑布流 end -->
+
+
+<script src="/js/script.js"></script>
+</body>
+</html>
